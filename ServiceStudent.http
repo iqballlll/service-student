@@ -4,3 +4,7 @@ GET {{ServiceStudent_HostAddress}}/weatherforecast/
 Accept: application/json
 
 ###
+
+GET {{ServiceStudent_HostAddress}}/api/Student/
+Accept: application/json
+

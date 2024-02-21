@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../SportNexMobile" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../footsal/front-admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../footsal/mobile-customer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../footsal/new-mobile-customer/mobile_customer" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../footsal/service-api-admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../kol/mobile" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../learn_nest" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../mobile" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../restapi" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../service-api-admin" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../service-nu-majalengka" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../IQBAL FOLDER/flutter-clean-arch" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/../../IQBAL FOLDER/mobile" vcs="Git" />
+  </component>
+</project>

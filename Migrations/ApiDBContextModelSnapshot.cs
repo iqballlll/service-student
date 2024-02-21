@@ -23,29 +23,30 @@ namespace ServiceStudent.Migrations
 
             modelBuilder.Entity("ServiceStudent.Models.StudentEntity", b =>
                 {
-                    b.Property<int>("Id")
+                    b.Property<int>("id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("integer");
 
-                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("id"));
 
-                    b.Property<string>("Address")
+                    b.Property<string>("address")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Age")
+                    b.Property<int>("age")
                         .HasColumnType("integer");
 
-                    b.Property<string>("Name")
+                    b.Property<string>("gender")
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("gender")
-                        .HasColumnType("integer");
+                    b.Property<string>("name")
+                        .IsRequired()
+                        .HasColumnType("text");
 
-                    b.HasKey("Id");
+                    b.HasKey("id");
 
-                    b.ToTable("Students");
+                    b.ToTable("students");
                 });
 #pragma warning restore 612, 618
         }
