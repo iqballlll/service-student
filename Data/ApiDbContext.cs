@@ -10,6 +10,8 @@ namespace ServiceStudent.Data;
 public class ApiDBContext : DbContext
 {
     public virtual DbSet<StudentEntity> Students { get; set; }
+    
+    public virtual DbSet<GradesEntity> Grades { get; set; }
     public ApiDBContext(DbContextOptions<ApiDBContext> options) : base(options) { }
 
 

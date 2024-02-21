@@ -102,16 +102,16 @@ namespace ServiceStudent.Controllers
         // POST: v1/students
       
         [HttpPost]
-        public async Task<ActionResult<ResponseData<StudentEntity>>> PostStudentEntity(StudentData studentEntity)
+        public async Task<ActionResult<ResponseData<StudentEntity>>> PostStudentEntity(StudentPayload studentPayload)
         {
             try
             {
                 var data = new StudentEntity
                 {
-                    name = studentEntity.name,
-                    age = studentEntity.age,
-                    address = studentEntity.address,
-                    gender = studentEntity.gender
+                    name = studentPayload.name,
+                    age = studentPayload.age,
+                    address = studentPayload.address,
+                    gender = studentPayload.gender
                     
                 };
                 context.Students.Add(data);
@@ -120,6 +120,63 @@ namespace ServiceStudent.Controllers
                 return Ok(new ResponseData<StudentEntity>
                 {
                     code = 200, message = "Success", data = data
+                });
+            }
+            catch (Exception e)
+            {
+                return Ok(new ResponseData<object>
+                {
+                    code = 500, message = e.Message
+                });
+            }
+        }
+        
+        // POST: v1/students/grade
+      
+        [HttpPost]
+        
+        [Route("/v1/students/grade")]
+        public async Task<ActionResult<ResponseData<StudentEntity>>> PostStudentGradeEntity(StudentGradePayload studentGradePayload)
+        {
+            try
+            {
+                var studentData = new StudentEntity
+                {
+                    name = studentGradePayload.name,
+                    age = studentGradePayload.age,
+                    address = studentGradePayload.address,
+                    gender = studentGradePayload.gender
+                    
+                };
+                context.Students.Add(studentData);
+                
+                await context.SaveChangesAsync();
+
+                var studentId = studentData.id;
+
+                var gradeData = new GradesEntity
+                {
+                    student_id = studentId,
+                    grade = studentGradePayload.grade
+                };
+                
+                context.Grades.Add(gradeData);
+                
+                await context.SaveChangesAsync();
+                
+                var response = new 
+                {
+                    id = studentData.id,
+                    name = studentData.name,
+                    age = studentData.age,
+                    address = studentData.address,
+                    gender = studentData.gender,
+                    grade = gradeData.grade
+                };
+                
+                return Ok(new ResponseData<object>
+                {
+                    code = 200, message = "Success", data = response
                 });
             }
             catch (Exception e)
@@ -168,7 +225,7 @@ namespace ServiceStudent.Controllers
         }
 
       
-        public class StudentData
+        public class StudentPayload
         {
         
           
@@ -182,6 +239,25 @@ namespace ServiceStudent.Controllers
       
          
             public string gender { get; set; }
+            
+        }
+        
+        public class StudentGradePayload
+        {
+        
+          
+            public  string name { get; set; }
+        
+          
+            public int age { get; set; }
+        
+          
+            public required string address { get; set; }
+      
+         
+            public string gender { get; set; }
+            
+            public int grade { get; set; }
             
         }
     }
