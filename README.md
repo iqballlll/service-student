@@ -14,16 +14,16 @@ Panduan instalasi dan pengaturan proyek. Pastikan untuk menyertakan prasyarat si
 
 ### Instalasi
 
-1. Langkah pertama instalasi
-    ```sh
-    hubungkan database postgresql dengan project
-    ```
-2. Masuk ke direktori program, kemudian jalan perintah berikut pada terminal
+1. Hubungkan database postgresql dengan project
+
+2. Sesuaikan dengan appsettings.json yang ada di folder project
+    
+3. Masuk ke direktori program, kemudian jalan perintah berikut pada terminal
     ```sh
     dotnet ef database update
     ```
-3. Jangan lupa untuk cek apakah database sudah sukses untuk diperbarui
-4. Silakan running program .NET
+4. Jangan lupa untuk cek apakah database sudah sukses untuk diperbarui
+5. Silakan running program .NET
     
 
 ## Penggunaan
@@ -31,8 +31,20 @@ Panduan instalasi dan pengaturan proyek. Pastikan untuk menyertakan prasyarat si
 API tersedia secara online dengan URL :
 
 ```sh
-    http://103.245.38.201/v1/students
-    ```
+http://103.245.38.201/v1/students
+```
+
+POST http://103.245.38.201/v1/students
+Content-Type: application/json
+
+{
+  "name": "John Doe",
+  "age": 18,
+  "address": "123 Main Street",
+  "gender": "male"
+}
+
+
 
 ## Kontak
 
