@@ -28,22 +28,12 @@ Panduan instalasi dan pengaturan proyek. Pastikan untuk menyertakan prasyarat si
 
 ## Penggunaan
 
-Instruksi untuk menggunakan atau menjalankan proyek. Ini bisa berupa contoh cara menggunakan perintah, antarmuka pengguna, atau API.
+API tersedia secara online dengan URL :
 
-## Kontribusi
-
-Jika Anda ingin berkontribusi pada proyek ini, silakan ikuti langkah-langkah berikut:
-
-1. Fork proyek
-2. Buat branch fitur baru (`git checkout -b fitur/NamaFitur`)
-3. Commit perubahan Anda (`git commit -am 'Menambahkan fitur baru'`)
-4. Push ke branch Anda (`git push origin fitur/NamaFitur`)
-5. Buat pull request baru
-
-## Lisensi
-
-Proyek ini dilisensikan di bawah [NamaLisensi]. Lihat file `LISENSI.md` untuk informasi lebih lanjut.
+```sh
+    http://103.245.38.201/v1/students
+    ```
 
 ## Kontak
 
-Jika Anda memiliki pertanyaan atau masalah terkait proyek, silakan hubungi [NamaAnda] di [AlamatEmailAnda].
+Jika Anda memiliki pertanyaan atau masalah terkait proyek, silakan hubungi [Muhammad Iqbal A] di [https://wa.me/6285559059632].
