@@ -1,6 +1,6 @@
-# Nama Proyek
+# SERVICE STUDENT ATR UNIVERSITY
 
-Deskripsi singkat proyek disini. Jelaskan apa yang proyek ini lakukan, mengapa penting, dan siapa yang mungkin memanfaatkannya.
+Simpel API untuk mahasiswa Universitas ATR
 
 ## Instalasi
 
@@ -9,20 +9,22 @@ Panduan instalasi dan pengaturan proyek. Pastikan untuk menyertakan prasyarat si
 ### Prasyarat
 
 - Daftar prasyarat atau dependensi yang diperlukan untuk menjalankan proyek, seperti:
-  - Node.js
-  - Python 3
-  - dll.
+  - PostgreSQL 16
+  - .NET 8
 
 ### Instalasi
 
 1. Langkah pertama instalasi
     ```sh
-    command pertama
+    hubungkan database postgresql dengan project
     ```
-2. Langkah kedua instalasi
+2. Masuk ke direktori program, kemudian jalan perintah berikut pada terminal
     ```sh
-    command kedua
+    dotnet ef database update
     ```
+3. Jangan lupa untuk cek apakah database sudah sukses untuk diperbarui
+4. Silakan running program .NET
+    
 
 ## Penggunaan
 
