@@ -33,18 +33,53 @@ API tersedia secara online dengan URL :
 ```sh
 http://103.245.38.201/v1/students
 ```
+##
+### GET ALL STUDENT / GELL STUDENT BY PARAMS (GET)
 
-POST http://103.245.38.201/v1/students
+http://103.245.38.201/v1/students
+
+atau
+
+http://103.245.38.201/v1/students?name=Freya&address=Yogyakarta
+##
+### CREATE STUDENT (POST)
+
+http://103.245.38.201/v1/students
+
 Content-Type: application/json
 
+Payload : 
+
+```sh
 {
-  "name": "John Doe",
-  "age": 18,
-  "address": "123 Main Street",
-  "gender": "male"
+  "name": "Freya",
+  "address": "Yogya",
+  "gender": "Wanita"
 }
+```
+##
+### UPDATE STUDENT (PUT)
 
+http://103.245.38.201/v1/students/1
 
+Content-Type: application/json
+
+Payload : 
+
+```sh
+{
+  "id":1,
+  "name": "Freya",
+  "address": "Yogya",
+  "gender": "Wanita"
+}
+```
+##
+### DELETE STUDENT (DELETE)
+
+http://103.245.38.201/v1/students/2
+
+##
 
 ## Kontak
 
